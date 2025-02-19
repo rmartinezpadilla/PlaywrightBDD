@@ -1,0 +1,19 @@
+{
+  "name": "PlaywrightBDD_Video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "playwright-bdd": "^8.2.0"
+  },
+  "dependencies": {
+    "playwright": "^1.50.1"
+  }
+}
