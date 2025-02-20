@@ -23,7 +23,7 @@ Feature: Verify login
 	
     Examples:
 		| emailaddress		            | password 	 	| 
-		| xzy@gmail.com 	            |	 TesMeTest     |
+		| xzy@gmail.com 	            | TesMeTest     |
 		| srk@testroverautomation.com   | Jawan123 |
 		| testerrgreat@123.com          | Tesrxzy123 |
 		| srk_jawan@test.com            | great123 |
