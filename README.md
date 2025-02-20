@@ -7,6 +7,19 @@ Esta guía esta diseñada para configurar y realizar un proyecto playwright BDD 
 * npm i -D playwright-bdd
 * npm i -D @cucumber/cucumber@latest
 
+## Estructura de carpetas de nuestro proyecto
+```
+playwright-cucumber-bdd/
+│── tests/
+│   ├── features/
+|       ├── example.feature
+│   ├── steps/
+|       ├── namesteps.js
+│── bdd.config.json
+│── playwright.config.ts
+│── package.json
+│── tsconfig.json
+```
 ### Ejecutamos una prueba para validar si la instalación de los paquetes ha sido exitosa
 * npx playwright test
 
@@ -46,6 +59,14 @@ export default defineConfig({
     },
   ],
 });
+```
+
+### Screenshot
+En el archivo playwright.config.js agregaamos las siguientes lineas en el objeto "use" del metodo definconfig() para activar las capturas de pantalla cuando fallen los escenarios
+```
+screenshot: 'only-on-failure',    
+video: 'retain-on-failure',  // 🔹 Solo guarda el video si la prueba falla
+//video: 'on', // 🔹 Guarda el video siempre
 ```
 ### ejecutamos el comando
 * npx bddgen

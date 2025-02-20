@@ -22,6 +22,9 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',    
+    video: 'retain-on-failure',  // 🔹 Solo guarda el video si la prueba falla
+    //video: 'on', // 🔹 Guarda el video siempre
   },
   projects: [
     {
