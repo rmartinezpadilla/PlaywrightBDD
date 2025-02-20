@@ -5,7 +5,7 @@ import { expect } from '@playwright/test';
 const { Before, Given, When, Then } = createBdd(test);
 
 // 1. Missing step definition for "ecomlogin.feature:8:3"
-Given('I navigate to {string}', async ({ ecomLoginPage, page }, url) => {
+Given('I navigate to {string}', async ({ ecomLoginPage }, url) => {
     await ecomLoginPage.navigateToUrl(url);
 });
 

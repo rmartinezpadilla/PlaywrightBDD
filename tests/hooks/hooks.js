@@ -4,10 +4,8 @@ import { createBdd } from 'playwright-bdd';
 
 const { Before, After, BeforeAll, AfterAll,  } = createBdd();
 
-Before(async({page})=>{
-    console.log("🔥 Iniciando la prueba...");
-    await page.goto('https://ecommerce-playground.lambdatest.io/')
-    
+Before(async({page})=>{    
+    await page.goto('https://ecommerce-playground.lambdatest.io/')    
 });
 
 After(async()=>{
@@ -16,10 +14,11 @@ After(async()=>{
 });
 
 BeforeAll(async({browser})=>{
-    const page = firefox.launch();
+    console.log("🔥 Iniciando la prueba...");
+    const page = chromium.launch();
 });
 
 AfterAll(async()=>{
-    console.log("🧹 Finalizando pruebas y limpiando recursos...");
     console.log("This is a AfterAll.")
+    console.log("🧹 Finalizando pruebas y limpiando recursos...");  
 });
