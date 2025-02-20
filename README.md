@@ -58,6 +58,16 @@ Copiamos lo que nos arroja el generador y lo poegamos en nuestro archivo de step
 ejecutamos el comando
 * npx bddgen
 * npx bddgen; npx playwright test
+* npx bddgen && npx playwright test
 * npx bddgen; npx playwright test --reporter=html,list --headed // --headed -> para levantar el navegador
+
+Una vez ya tenemos configurado "Script" en nuestro archivo package.json de la siguiente manera:
+```
+"scripts": {    
+    "test": "npx bddgen && npx playwright test --reporter=html,list --headed"
+  },
+```
+Ejecutamos el comando para lanzar las pruebas:
+* npm run test
 
 
