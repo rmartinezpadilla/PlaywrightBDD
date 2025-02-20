@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {    
-    "test": "npx bddgen && npx playwright test --reporter=html,list --headed"
+    "test": "npm run bddgen && npm run playwright-test",
+    "bddgen": "npx bddgen",
+    "playwright-test": "npx playwright test --reporter=html,list"
   },
   "keywords": [],
   "author": "",

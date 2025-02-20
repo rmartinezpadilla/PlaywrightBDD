@@ -13,6 +13,12 @@ playwright-cucumber-bdd/
 │── tests/
 │   ├── features/
 |       ├── example.feature
+│   ├── fixtures/
+|       ├── fixture.js
+│   ├── hooks/
+|       ├── hooks.js
+│   ├── pages/
+|       ├── pageObj.js
 │   ├── steps/
 |       ├── namesteps.js
 │── bdd.config.json
@@ -85,8 +91,10 @@ ejecutamos el comando
 
 Una vez ya tenemos configurado "Script" en nuestro archivo package.json de la siguiente manera:
 ```
-"scripts": {    
-    "test": "npx bddgen && npx playwright test --reporter=html,list --headed"
+ "scripts": {    
+    "test": "npm run bddgen && npm run playwright-test",
+    "bddgen": "npx bddgen",
+    "playwright-test": "npx playwright test --reporter=html,list"
   },
 ```
 Ejecutamos el comando para lanzar las pruebas:
