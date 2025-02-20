@@ -1,61 +1,61 @@
 // Generated from: tests/features/ecomlogin.feature
-import { test } from "playwright-bdd";
+import { test } from "../../../tests/fixtures/fixture.js";
 
 test.describe('Verify login', () => {
 
-  test('Verify user is able to login with valid credentials', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-    await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-    await And('I click on My account', null, { page }); 
-    await And('I enter E-Mail Address "pranav@testroverautomation.com"', null, { page }); 
-    await And('I enter password "Test1234"', null, { page }); 
-    await When('I click on submit button', null, { page }); 
+  test('Verify user is able to login with valid credentials', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+    await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+    await And('I click on My account', null, { ecomLoginPage }); 
+    await And('I enter E-Mail Address "pranav@testroverautomation.com"', null, { ecomLoginPage }); 
+    await And('I enter password "Test1234"', null, { ecomLoginPage }); 
+    await When('I click on submit button', null, { ecomLoginPage }); 
     await Then('I should verify url contains "route=account/account"', null, { page }); 
   });
 
   test.describe('Verify user is not able login with following credentails', () => {
 
-    test('Example #1', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-      await And('I click on My account', null, { page }); 
-      await And('I enter E-Mail Address "xzy@gmail.com"', null, { page }); 
-      await And('I enter password "TesMeTest"', null, { page }); 
-      await When('I click on submit button', null, { page }); 
+    test('Example #1', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+      await And('I click on My account', null, { ecomLoginPage }); 
+      await And('I enter E-Mail Address "xzy@gmail.com"', null, { ecomLoginPage }); 
+      await And('I enter password "TesMeTest"', null, { ecomLoginPage }); 
+      await When('I click on submit button', null, { ecomLoginPage }); 
       await Then('I should verify user is not able to login and url contains "route=account/login"', null, { page }); 
     });
 
-    test('Example #2', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-      await And('I click on My account', null, { page }); 
-      await And('I enter E-Mail Address "srk@testroverautomation.com"', null, { page }); 
-      await And('I enter password "Jawan123"', null, { page }); 
-      await When('I click on submit button', null, { page }); 
+    test('Example #2', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+      await And('I click on My account', null, { ecomLoginPage }); 
+      await And('I enter E-Mail Address "srk@testroverautomation.com"', null, { ecomLoginPage }); 
+      await And('I enter password "Jawan123"', null, { ecomLoginPage }); 
+      await When('I click on submit button', null, { ecomLoginPage }); 
       await Then('I should verify user is not able to login and url contains "route=account/login"', null, { page }); 
     });
 
-    test('Example #3', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-      await And('I click on My account', null, { page }); 
-      await And('I enter E-Mail Address "testerrgreat@123.com"', null, { page }); 
-      await And('I enter password "Tesrxzy123"', null, { page }); 
-      await When('I click on submit button', null, { page }); 
+    test('Example #3', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+      await And('I click on My account', null, { ecomLoginPage }); 
+      await And('I enter E-Mail Address "testerrgreat@123.com"', null, { ecomLoginPage }); 
+      await And('I enter password "Tesrxzy123"', null, { ecomLoginPage }); 
+      await When('I click on submit button', null, { ecomLoginPage }); 
       await Then('I should verify user is not able to login and url contains "route=account/login"', null, { page }); 
     });
 
-    test('Example #4', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-      await And('I click on My account', null, { page }); 
-      await And('I enter E-Mail Address "srk_jawan@test.com"', null, { page }); 
-      await And('I enter password "great123"', null, { page }); 
-      await When('I click on submit button', null, { page }); 
+    test('Example #4', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+      await And('I click on My account', null, { ecomLoginPage }); 
+      await And('I enter E-Mail Address "srk_jawan@test.com"', null, { ecomLoginPage }); 
+      await And('I enter password "great123"', null, { ecomLoginPage }); 
+      await When('I click on submit button', null, { ecomLoginPage }); 
       await Then('I should verify user is not able to login and url contains "route=account/login"', null, { page }); 
     });
 
-    test('Example #5', { tag: ['@login'] }, async ({ Given, page, And, When, Then }) => { 
-      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { page }); 
-      await And('I click on My account', null, { page }); 
-      await And('I enter E-Mail Address "SalmanDabang@gmail.com"', null, { page }); 
-      await And('I enter password "test 123"', null, { page }); 
-      await When('I click on submit button', null, { page }); 
+    test('Example #5', { tag: ['@login'] }, async ({ Given, ecomLoginPage, page, And, When, Then }) => { 
+      await Given('I navigate to "https://ecommerce-playground.lambdatest.io/"', null, { ecomLoginPage, page }); 
+      await And('I click on My account', null, { ecomLoginPage }); 
+      await And('I enter E-Mail Address "SalmanDabang@gmail.com"', null, { ecomLoginPage }); 
+      await And('I enter password "test 123"', null, { ecomLoginPage }); 
+      await When('I click on submit button', null, { ecomLoginPage }); 
       await Then('I should verify user is not able to login and url contains "route=account/login"', null, { page }); 
     });
 
@@ -65,10 +65,16 @@ test.describe('Verify login', () => {
 
 // == technical section ==
 
+test.beforeAll('BeforeAll Hooks', ({ $runBeforeAllHooks, browser }) => $runBeforeAllHooks(test, { browser }, bddFileData));
+test.afterAll('AfterAll Hooks', ({ $registerAfterAllHooks }) => $registerAfterAllHooks(test, {  }, bddFileData));
+test.beforeEach('BeforeEach Hooks', ({ $beforeEach }) => {});
+test.afterEach('AfterEach Hooks', ({ $afterEach }) => {});
+
 test.use({
   $test: ({}, use) => use(test),
   $uri: ({}, use) => use('tests/features/ecomlogin.feature'),
   $bddFileData: ({}, use) => use(bddFileData),
+  $beforeEachFixtures: ({ page }, use) => use({ page }),
 });
 
 const bddFileData = [ // bdd-data-start

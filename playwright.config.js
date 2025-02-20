@@ -4,6 +4,8 @@ import { defineBddConfig } from 'playwright-bdd';
 const testDir = defineBddConfig({
   paths: ['tests/features/*.feature'],
   require: ['tests/steps/*.js'],
+  features: 'tests/features/***.feature',
+  steps: ['tests/steps/***steps.js', 'tests/fixtures/fixture.js', "tests/hooks/hooks.js" ],
   use: {
     trace: 'on-first-retry',
     headless: false, // <-- Agrega esto
