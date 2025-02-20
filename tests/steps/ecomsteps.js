@@ -37,6 +37,9 @@ const { Given, When, Then } = createBdd();
     Then('I should verify url contains {string}', async ({ page }, path) => {
     // Step: Then I should verify url contains "route=account/account"
     // From: tests/features/ecomlogin.feature:14:9
-        await expect(page).toHaveURL(new RegExp(path));
-
-});
+        await expect(page).toHaveURL(new RegExp(path));   
+    });
+    
+    Then('I should verify user is not able to login and url contains {string}', async ({ page }, login_url) => {
+        await expect(page).toHaveURL(new RegExp(login_url));
+    });

@@ -15,7 +15,7 @@ Feature: Verify login
 
 	Scenario Outline: Verify user is not able login with following credentails 
         Given I navigate to "https://ecommerce-playground.lambdatest.io/"
-        And I click on "My account"
+        And I click on My account
         And I enter E-Mail Address "<emailaddress>"
         And I enter password "<password>"
         When I click on submit button

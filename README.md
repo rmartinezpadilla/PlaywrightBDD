@@ -80,6 +80,7 @@ ejecutamos el comando
 * npx bddgen
 * npx bddgen; npx playwright test
 * npx bddgen && npx playwright test
+* npx bddgen; npx playwright test --reporter=html,list
 * npx bddgen; npx playwright test --reporter=html,list --headed // --headed -> para levantar el navegador
 
 Una vez ya tenemos configurado "Script" en nuestro archivo package.json de la siguiente manera:
